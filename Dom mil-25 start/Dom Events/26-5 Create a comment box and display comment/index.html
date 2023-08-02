@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a comment box and display comment</title>
+</head>
+<body>
+    <div id="comment">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam excepturi nesciunt dicta voluptatibus alias repudiandae officia ipsa fugit nisi error totam officiis eos aliquam vel veniam a accusamus, repellendus at. Vel illo atque repudiandae. Accusamus fuga dolore fugiat alias quos. Minus officiis quo nostrum consequuntur similique dolore quas! Exercitationem, consequuntur?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam excepturi nesciunt dicta voluptatibus alias repudiandae officia ipsa fugit nisi error totam officiis eos aliquam vel veniam a accusamus, repellendus at. Vel illo atque repudiandae. Accusamus fuga dolore fugiat alias quos. Minus officiis quo nostrum consequuntur similique dolore quas! Exercitationem, consequuntur?</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam excepturi nesciunt dicta voluptatibus alias repudiandae officia ipsa fugit nisi error totam officiis eos aliquam vel veniam a accusamus, repellendus at. Vel illo atque repudiandae. Accusamus fuga dolore fugiat alias quos. Minus officiis quo nostrum consequuntur similique dolore quas! Exercitationem, consequuntur?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam excepturi nesciunt dicta voluptatibus alias repudiandae officia ipsa fugit nisi error totam officiis eos aliquam vel veniam a accusamus, repellendus at. Vel illo atque repudiandae. Accusamus fuga dolore fugiat alias quos. Minus officiis quo nostrum consequuntur similique dolore quas! Exercitationem, consequuntur?</p>
+
+    </div>
+    <div><textarea name="" id="new-comment" cols="30" rows="10"></textarea>
+        <button id="btn-post">sent</button>
+    </div>
+
+    <script>
+        // step 1
+        document.getElementById("btn-post").addEventListener('click', function(){
+
+            // step 2
+            const newValue = document.getElementById('new-comment');
+            const newcomment = newValue.value;
+            
+            
+            // step 3
+            const newElements = document.getElementById('comment');
+           const create = document.createElement('p');
+           create.innerText=newcomment;
+
+           newElements.append("new append",create);
+           newValue.value= '';
+
+        });
+    </script>
+</body>
+</html>

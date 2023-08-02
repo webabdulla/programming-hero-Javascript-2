@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(semi-advanced) Event bubble and Stop propagating</title>
+</head>
+<style>
+    ul{
+        border:3px solid palevioletred;
+
+    }
+    body{
+        border:3px solid rgb(246, 45, 10);
+        margin:20px;
+    }
+    section{
+        border:3px solid rgb(30, 10, 246);
+        
+        margin:20px;
+    }
+    #list2{
+
+        border:3px solid rgb(246, 10, 199);
+        margin:20px;
+    
+    }
+</style>
+<body>
+    <section id="sec">
+        <ul id="ulsty">
+            <li id="list1">Lorem, ipsum.</li>
+            <li id="list2">Lorem, ipsum.</li>
+            <li id="list3">Lorem, ipsum.</li>
+            <li id="list4">Lorem, ipsum.</li>
+        </ul>
+    </section>
+
+
+    <script>
+        document.getElementById("sec").addEventListener('click', function(event){
+
+            console.log("section clicked");
+          
+        });
+        document.getElementById("list2").addEventListener('click', function(){
+            console.log("number2 is clicked");
+            event.stopPropagation();
+        });
+        document.getElementById("ulsty").addEventListener('click', function(){
+            console.log("unorder list is clicked");
+        });
+        document.getElementById("list4").addEventListener('click', function(){
+            console.log("number4 is clicked");
+        });
+    </script>
+</body>
+</html>

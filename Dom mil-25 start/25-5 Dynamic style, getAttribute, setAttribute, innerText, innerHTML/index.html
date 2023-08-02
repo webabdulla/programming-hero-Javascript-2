@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >Traversing dom - getElementByQuerySelector, querySelectorAll</title>
+</head>
+<body>
+    <div class="section-padding">
+        <div class="section-title">
+            <h2  id="title001">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, delectus!</h2>
+        </div>
+        <div class="list-section domList nn mbmmc">
+            <ul class="listxx">
+                <li class="myClass">section-1</li>
+                <li class="myClass">section-2</li>
+                <li class="myClass">section-3</li>
+                <li id="myId" class="mynul mejan mim naim baby">my name is miraj</li>
+                <li class="change">Lorem, ipsum.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+    // Dinamic style set 
+      const numbers = document.querySelector('.section-title').style.color='red';
+      console.log(numbers);
+
+      const number = document.querySelector('.section-title').style.backgroundColor='yellow';
+      console.log(number);
+      
+      const numbe = document.querySelector('.section-title').style.textAlign= 'center';
+      console.log(numbe);
+
+      const result55 = document.getElementById('myId');
+      result55.getAttribute('class');
+
+    //   add remove class 
+      result55.classList.add("miraj");
+      result55.classList.remove('mim');
+      console.log(result55);
+
+
+    //   tooltip 
+      const title01 = document.getElementById("title001");
+      let title2 = title01.setAttribute("title","my name is miraj");
+
+      console.log(title2);
+
+
+      const inners = document.getElementsByClassName("change")[0].innerHTML='<h2>lorem lorem</h2>';
+      console.log(inners);
+
+
+    </script>
+</body>
+</html>

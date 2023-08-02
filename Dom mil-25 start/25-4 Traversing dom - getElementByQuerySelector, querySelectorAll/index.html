@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traversing dom - getElementByQuerySelector, querySelectorAll</title>
+</head>
+<body>
+    <div class="section-padding">
+        <div class="section-title">
+            <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, delectus!</h3>
+        </div>
+        <div class="list-section">
+            <ul class="listxx">
+                <li class="myClass">section-1</li>
+                <li class="myClass">section-2</li>
+                <li class="myClass">section-3</li>
+                <li id="myId">my name is miraj</li>
+                <li class="kkl">Lorem, ipsum.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        //queryselector
+        //.... will seclect first element
+    //     const someTimes = document.querySelector('.kkl');
+    //   console.log(someTimes);
+    //   for(var result2 of someTimes){
+    //     console.log(result2.innerText);
+    //   }
+
+        //queryselector all 
+      const someTime = document.querySelectorAll('#myId');
+      console.log(someTime);
+      for(var result of someTime){
+        console.log(result.innerText);
+      }
+
+      const moreTime = document.querySelectorAll('.myClass');
+      console.log(moreTime);
+
+      for( const result1 of moreTime){
+        console.log(result1.innerText);
+      }
+
+    </script>
+</body>
+</html>

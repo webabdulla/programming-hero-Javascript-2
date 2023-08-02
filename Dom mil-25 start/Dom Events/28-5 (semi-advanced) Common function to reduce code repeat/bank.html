@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bank inside</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <h3 class="text-5xl text-center mt-6 mb-5">Let get <span class="text-green-500">sum money</span></h3>
+
+    </header>
+
+    <main>
+        <section class="mt-12">
+            <div class="grid grid-cols-3 gap-4 mx-auto text-white w-9/12">
+                <div class="bg-green-400 p-8 rounded">
+                    <h3 class="text-2xl">Deposit</h3>
+                    <h2 class="text-5xl">$<span id="totalDepo"> 00</span></h2>
+                </div>
+                <div class="bg-red-300 p-8 rounded">
+                    <h3 class="text-2xl">withdrow</h3>
+                    <h2 class="text-5xl">$<span id="widthrow-total">00</span> </h2>
+                </div>
+                <div class="bg-yellow-500 p-8 rounded">
+                    <h3 class="text-2xl">Balance</h3>
+                    <h2 class="text-5xl">$<span id="blanceTotal">1200</span> </h2>
+                </div>
+            </div>
+
+        </section>
+
+ <!-- Deposit & withdrow  -->
+        <section class="mt-12">
+            <div class="grid grid-cols-2 gap-4 mx-auto w-9/12">
+                <div class="bg-cyan-400 p-8 rounded">
+                    <h3 class="text-2xl mb-4 text-white">Please Deposit</h3>
+                     <input id="deposit-fild" class="w-3/6 block mb-3 px-4" type="text" placeholder="Please Deposit" required>
+                    <button id="btn-Deposit" class="bg-amber-400 px-5 py-2 mt-3 hover:bg-sky-700  rounded-lg">Submit</button>
+                  
+                </div>
+                <div class="bg-purple-700 p-8 rounded">
+                    <h3 class="text-2xl text-white mb-4">Please withdrow</h3>
+                    <input id="withdrow-field" class="w-3/6 block mb-3 px-4" type="text" placeholder="Please withdrow" required>
+                    <button id="btn-withdrow" class="bg-amber-400 px-5 py-2 mt-3 hover:bg-sky-700  rounded-lg">Submit</button>
+                  
+                </div>
+                
+            </div>
+
+        </section>
+    </main>
+    <script src="./js/utility.js"></script>
+    <script src="./diposit.js"></script>
+    <script src="./withdraw.js"></script>   
+    
+</body>
+</html>

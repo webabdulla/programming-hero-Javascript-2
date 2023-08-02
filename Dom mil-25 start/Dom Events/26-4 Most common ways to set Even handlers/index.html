@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event hendiler </title>
+</head>
+<body>
+    <h2 id="heading">Hellow World</h2>
+
+    <p id="myp">amader deshe hobe sei sele kobe kothay na boro hoye kaje koro hobe</p>
+
+    <input id="input-fild" type="text">
+    <button id="text-button">my button</button>
+
+    <br>
+    <br>
+    <br>
+
+    <button onclick="evenHandilar()">press the button</button>
+    <button id="myButton">lode more</button>
+
+    <script>
+        function evenHandilar(){
+            const handler = document.getElementById('heading');
+            handler.innerText = 'handled by inner attribute'
+        };
+        document.getElementById('myButton').addEventListener('click',function(){
+            const changes = document.getElementById('heading');
+            changes.innerText='I love my contery';
+        });
+
+        document.getElementById('text-button').addEventListener('click', function(){
+            const textArea = document.getElementById('input-fild');
+            // textArea.value;
+            const inputText = textArea.value;
+            const p = document.getElementById('myp');
+            p.innerText= inputText;
+        })
+    </script>
+</body>
+</html>

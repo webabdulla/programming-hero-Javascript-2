@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p1</title>
+</head>
+<body>
+    <h2 id="hellow">ho are you </h2>
+
+     <p id="myName">my name is miraj</p>
+
+     <input id="myinput" type="text">
+
+     <button id="mybutton">
+        my button
+     </button>
+
+<br>
+<br>
+    <button onclick="changeText()">sent</button>
+
+    <button id="myButton">sent more information</button>
+
+    <script>
+  
+        document.getElementById('mybutton').addEventListener('click',function(){
+            const mytext = document.getElementById('myinput');
+
+            let inputFild = mytext.value;
+            const parag = document.getElementById('myName');
+            parag.innerText=inputFild;
+            mytext.value='';
+        })
+
+        function changeText(){
+            let evenHende = document.getElementById('hellow');
+            evenHende.innerText='I am fine thank you and you';
+        }
+
+         document.getElementById('myButton').addEventListener('click', function(){
+            const myBtn = document.getElementById('hellow');
+            myBtn.innerText='i am also fine , where are you going';
+        });
+    </script>
+</body>
+</html>
